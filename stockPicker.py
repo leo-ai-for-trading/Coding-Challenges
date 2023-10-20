@@ -22,6 +22,9 @@ Output: 5
 '''
 
 def StockPicker(arr):
+	#edge case when array is filled by equal element or [10,8,2,1] meaning that you couldn't make any profit
+	if arr == sorted(arr,reverse = True):
+		return -1
 	cost = 0
 	maxcost = 0
 	
